@@ -9,5 +9,6 @@ class Spaceship {
     this.docked = true;
     this.phasersCharge = "uncharged"
     crew.length > 0 ? this.docked = false : this.docked = true
+    crew.forEach(member => member.currentShip =  this)
   }
 }
