@@ -43,20 +43,20 @@ describe('ship with a crew', () => {
   describe('engage warp drive', () => {
     it("should set the spaceship's warp drive to 'engaged' when the pilot uses engageWarpDrive()", () => {
       defender.engageWarpDrive();
-      expect(aluminumFalcon.warpDrive).to.match(/disengaged/i);
+      expect(aluminumFalcon.warpDrive).to.match(/engaged/i);
 
       pilot.engageWarpDrive();
-      expect(aluminumFalcon.warpDrive).to.match(/engaged/i);
+      expect(aluminumFalcon.warpDrive).to.match(/disengaged/i);
     });
   });
 
   describe('cloak', () => {
     it('should cloak the ship when a defender uses setsInvisibility()', () => {
       gunner.setsInvisibility();
-      expect(aluminumFalcon.cloaked).to.eq(false);
+      expect(aluminumFalcon.cloaked).to.eq(true);
 
       defender.setsInvisibility();
-      expect(aluminumFalcon.cloaked).to.eq(true);
+      expect(aluminumFalcon.cloaked).to.eq(false);
     });
   });
 });
