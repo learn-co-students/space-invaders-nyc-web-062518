@@ -24,4 +24,5 @@ class Spaceship {
     // !crew == [] ? this.docked = true : this.docked = false
 
   }
+
 }
