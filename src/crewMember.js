@@ -50,10 +50,8 @@ class CrewMember {
     if (this.currentShip === "Looking for a Rig") {
       return "had no effect"
     } else {
-      if (this.currentShip.warpDrive === "disengaged") {
+      if (this.position === "Pilot") {
         return this.currentShip.warpDrive = "engaged"
-      } else {
-        return this.currentShip.warpDrive = "disengaged"
       }
     }
   }
@@ -62,12 +60,9 @@ class CrewMember {
     if (this.currentShip === "Looking for a Rig") {
       return "had no effect"
     } else {
-      if (this.currentShip.cloaked === true) {
-        return this.currentShip.cloaked = false
-      } else {
+      if (this.position === "Defender") {
         return this.currentShip.cloaked = true
-      };
-
+      }
     };
   };
 
